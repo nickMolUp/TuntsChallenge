@@ -102,7 +102,7 @@ public class SheetsQuickstart {
 				}
 				else if((50<=m)&&(m<70)){
 					row.add("Exame final");
-					row.add((m-100));
+					row.add((100-m));
 				}
 				else if(m>70){
 					row.add("Aprovado");
