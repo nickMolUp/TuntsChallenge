@@ -96,15 +96,15 @@ public class SheetsQuickstart {
 				m = (int) Math.ceil(m);//Rounds average 
 				
 				row.removeAll(row);
-				if(m<50){
+				if(m<50){//checks
 					row.add("Reprovado por Nota");
 					row.add("0");
 				}
-				else if((50<=m)&&(m<70)){
+				else if((50<=m)&&(m<70)){//checks
 					row.add("Exame final");
 					row.add((100-m));
 				}
-				else if(m>70){
+				else if(m>70){//checks
 					row.add("Aprovado");
 					row.add("0");
 				}
@@ -115,7 +115,7 @@ public class SheetsQuickstart {
 			UpdateValuesResponse result =
 						service.spreadsheets().values().update(spreadsheetId, rangeWrite, body)
 						.setValueInputOption("RAW")
-						.execute();
+						.execute();//fills blank cells in google sheets
 			
         }
     }
